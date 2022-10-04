@@ -38,8 +38,8 @@ function getLevelBarBgClass(level: number) {
 
 const Home: NextPage = () => {
   return (
-    <div className="flex ">
-      <div className="bg-slate-800 flex flex-col w-80 text-white pl-5 pt-10">
+    <div className="flex min-h-screen h-full">
+      <div className="flex flex-col w-80 shrink-0 bg-slate-800 text-white pl-5 py-10">
         <div className="pb-6">
           <p className="text-3xl pb-3">{Profile.name}</p>
           <p className="text-gray-400 text-xl">{Profile.description}</p>
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
 
       <div className="flex-1 flex flex-col p-10">
         <p className="text-3xl pb-5">Profile</p>
-        <p className="whitespace-pre">{Profile.summary}</p>
+        <p className="whitespace-pre-line">{Profile.summary}</p>
         <p className="text-3xl pt-12 pb-5">Work History</p>
         <div className="space-y-5">
           {Profile.history.map(({ from, to, title, subjects }) => (
