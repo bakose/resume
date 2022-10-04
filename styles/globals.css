@@ -1,26 +1,57 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  .cs-icon {
+    @apply w-4 h-4 fill-slate-300;
   }
-  body {
-    color: white;
-    background: black;
+  .cs-profile-item-box {
+    @apply flex items-center space-x-2;
+  }
+  .cs-profile-item {
+    @apply text-sm text-gray-400;
+  }
+  .cs-skills-item-box {
+    @apply flex flex-col space-y-2 text-gray-200;
+  }
+  .cs-history-date-box {
+    @apply w-20;
+  }
+  .cs-skills-level {
+    @apply flex bg-white rounded-l-lg;
+  }
+  .cs-skills-level-1 {
+    @apply cs-skills-level w-1/5;
+  }
+  .cs-skills-level-2 {
+    @apply cs-skills-level w-2/5;
+  }
+  .cs-skills-level-3 {
+    @apply cs-skills-level w-3/5;
+  }
+  .cs-skills-level-4 {
+    @apply cs-skills-level w-4/5;
+  }
+  .cs-skills-level-5 {
+    @apply cs-skills-level rounded-lg w-full;
+  }
+  .cs-skills-level-bg {
+    @apply flex bg-gray-400 rounded-r-lg;
+  }
+  .cs-skills-level-bg-1 {
+    @apply cs-skills-level-bg w-4/5;
+  }
+  .cs-skills-level-bg-2 {
+    @apply cs-skills-level-bg w-3/5;
+  }
+  .cs-skills-level-bg-3 {
+    @apply cs-skills-level-bg w-2/5;
+  }
+  .cs-skills-level-bg-4 {
+    @apply cs-skills-level-bg w-1/5;
+  }
+  .cs-skills-level-bg-5 {
+    @apply cs-skills-level-bg rounded-lg w-0;
   }
 }
