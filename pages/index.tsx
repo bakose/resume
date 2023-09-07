@@ -115,7 +115,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col p-10">
+      <div className="flex-1 flex flex-col pl-10 py-10 pr-[10rem]">
         <p className="text-3xl pb-5">Profile</p>
         <p className="whitespace-pre-line">{Profile.summary}</p>
         <p className="text-3xl pt-12 pb-5">Work History</p>
@@ -126,15 +126,17 @@ const Home: NextPage = () => {
                 {from} - {to}
               </p>
               <div className="flex-1">
-                <p className="text-lg font-semibold">{title}</p>
-                {subjects.map(({ item, details }) => (
-                  <div key={item} className="pb-3">
-                    <p>{item}</p>
-                    <ul className="pl-6 list-disc">
-                      {details.map((detail) => (
-                        <li key={detail}>{detail}</li>
-                      ))}
-                    </ul>
+                <p className="text-lg font-semibold mb-1">{title}</p>
+                {subjects.map(({ title, skills, detail }, idx) => (
+                  <div key={idx} className="pb-3">
+                    <p className="font-medium mb-2">{title}</p>
+
+                    <p className="whitespace-pre-line text-gray-700 mb-2">
+                      {detail}
+                    </p>
+                    <p className="font-medium text-gray-700">
+                      Skills: {skills}
+                    </p>
                   </div>
                 ))}
               </div>
